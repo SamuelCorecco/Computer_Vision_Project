@@ -7,7 +7,7 @@ video_input = cv2.VideoCapture('WSC.mp4')
 
 fourcc = cv2.VideoWriter_fourcc(*'XVID')
 video_output = cv2.VideoWriter('filtered_video.mp4', fourcc, video_input.get(cv2.CAP_PROP_FPS), (int(video_input.get(cv2.CAP_PROP_FRAME_WIDTH)), int(video_input.get(cv2.CAP_PROP_FRAME_HEIGHT))))
-print("dimension video: ", video_input.get(cv2.CAP_PROP_FRAME_WIDTH), video_input.get(cv2.CAP_PROP_FRAME_HEIGHT))
+print("Video dimensions: ", video_input.get(cv2.CAP_PROP_FRAME_WIDTH), video_input.get(cv2.CAP_PROP_FRAME_HEIGHT))
 
 def preprocess_frame(frame):
     return frame[:,:,1]
